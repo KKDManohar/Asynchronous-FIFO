@@ -1,0 +1,1128 @@
+couldn't open "transcript": permission denied
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+cd {\\thoth.cecs.pdx.edu\Home02\kkarna\Desktop\ece593s24_team_01_Asyn_FIFO_M3}
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:09:14 on May 14,2024
+# vlog -reportprogress 300 design.sv 
+# -- Compiling module asynchronous_fifo
+# -- Compiling module synchronizer
+# -- Compiling module write_ptr
+# -- Compiling module read_ptr
+# -- Compiling module fifo_mem
+# 
+# Top level modules:
+# 	asynchronous_fifo
+# End time: 23:09:14 on May 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:09:14 on May 14,2024
+# vlog -reportprogress 300 Interface.sv 
+# -- Compiling interface intf
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:09:15 on May 14,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:09:15 on May 14,2024
+# vlog -reportprogress 300 top_module.sv 
+# -- Compiling package top_module_sv_unit
+# -- Compiling program test
+# -- Compiling interface intf
+# -- Compiling module async_fifo_top
+# 
+# Top level modules:
+# 	async_fifo_top
+# End time: 23:09:15 on May 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:09:15 on May 14,2024
+# vlog -reportprogress 300 async_fifo_test.sv 
+# -- Compiling package async_fifo_test_sv_unit
+# -- Compiling program test
+# 
+# Top level modules:
+# 	test
+# End time: 23:09:15 on May 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim async_fifo_top 
+# Start time: 23:09:15 on May 14,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.top_module_sv_unit(fast)
+# Loading work.async_fifo_top(fast)
+# Loading work.async_fifo_test_sv_unit(fast)
+# Loading work.test(fast)
+# Loading work.intf(fast)
+# End time: 23:09:24 on May 14,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+# vsim -coverage async_fifo_top -voptargs=""+cover=bcesf"" 
+# Start time: 23:09:24 on May 14,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.top_module_sv_unit(fast)
+# Loading work.async_fifo_top(fast)
+# Loading work.async_fifo_test_sv_unit(fast)
+# Loading work.test(fast)
+# Loading work.intf(fast)
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:09:28 on May 14,2024
+# vlog -reportprogress 300 -cover bcst design.sv 
+# -- Compiling module asynchronous_fifo
+# -- Compiling module synchronizer
+# -- Compiling module write_ptr
+# -- Compiling module read_ptr
+# -- Compiling module fifo_mem
+# 
+# Top level modules:
+# 	asynchronous_fifo
+# End time: 23:09:28 on May 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:09:30 on May 14,2024, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+# vsim -coverage async_fifo_top -do "run -all; exit" 
+# Start time: 23:09:30 on May 14,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.top_module_sv_unit(fast)
+# Loading work.async_fifo_top(fast)
+# Loading work.async_fifo_test_sv_unit(fast)
+# Loading work.test(fast)
+# Loading work.asynchronous_fifo(fast)
+# Loading work.intf(fast)
+# run -all
+# ** Warning: (vsim-3881) top_module.sv(46): Sign-and-Width conversion applied in bin 'low_range' for Coverpoint 'DATA_WRITE'. Value '511' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3882) top_module.sv(46): Out of bounds value range in bin 'low_range' for Coverpoint 'DATA_WRITE' converted to nearest valid bounded range of [1:255].
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3881) top_module.sv(47): Sign-and-Width conversion applied in bin 'mid_range' for Coverpoint 'DATA_WRITE'. Value '512' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3881) top_module.sv(47): Sign-and-Width conversion applied in bin 'mid_range' for Coverpoint 'DATA_WRITE'. Value '1023' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-8475) The invalid value range [512 : 1023] is found in bin 'mid_range' of Coverpoint 'DATA_WRITE'. It will be ignored.
+#    Time: 0 ns  Iteration: 0  Process: /async_fifo_top/#INITIAL#118 File: top_module.sv Line: 47
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'mid_range' in Coverpoint 'DATA_WRITE' of Covergroup instance '\/async_fifo_top/async_fifo_cov_inst ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3881) top_module.sv(48): Sign-and-Width conversion applied in bin 'high_range' for Coverpoint 'DATA_WRITE'. Value '1023' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3881) top_module.sv(48): Sign-and-Width conversion applied in bin 'high_range' for Coverpoint 'DATA_WRITE'. Value '2048' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-8475) The invalid value range [1023 : 2048] is found in bin 'high_range' of Coverpoint 'DATA_WRITE'. It will be ignored.
+#    Time: 0 ns  Iteration: 0  Process: /async_fifo_top/#INITIAL#118 File: top_module.sv Line: 48
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'high_range' in Coverpoint 'DATA_WRITE' of Covergroup instance '\/async_fifo_top/async_fifo_cov_inst ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3881) top_module.sv(65): Sign-and-Width conversion applied in bin 'low_range' for Coverpoint 'DATA_READ'. Value '511' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3882) top_module.sv(65): Out of bounds value range in bin 'low_range' for Coverpoint 'DATA_READ' converted to nearest valid bounded range of [1:255].
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3881) top_module.sv(66): Sign-and-Width conversion applied in bin 'mid_range' for Coverpoint 'DATA_READ'. Value '512' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3881) top_module.sv(66): Sign-and-Width conversion applied in bin 'mid_range' for Coverpoint 'DATA_READ'. Value '1023' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-8475) The invalid value range [512 : 1023] is found in bin 'mid_range' of Coverpoint 'DATA_READ'. It will be ignored.
+#    Time: 0 ns  Iteration: 0  Process: /async_fifo_top/#INITIAL#118 File: top_module.sv Line: 66
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'mid_range' in Coverpoint 'DATA_READ' of Covergroup instance '\/async_fifo_top/async_fifo_cov_inst ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3881) top_module.sv(67): Sign-and-Width conversion applied in bin 'high_range' for Coverpoint 'DATA_READ'. Value '1023' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-3881) top_module.sv(67): Sign-and-Width conversion applied in bin 'high_range' for Coverpoint 'DATA_READ'. Value '2048' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# ** Warning: (vsim-8475) The invalid value range [1023 : 2048] is found in bin 'high_range' of Coverpoint 'DATA_READ'. It will be ignored.
+#    Time: 0 ns  Iteration: 0  Process: /async_fifo_top/#INITIAL#118 File: top_module.sv Line: 67
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'high_range' in Coverpoint 'DATA_READ' of Covergroup instance '\/async_fifo_top/async_fifo_cov_inst ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top
+# test environment started
+# Reset Started
+# Reset Ended:
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 9c
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = aa
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 24
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 12
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = fe
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ea
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ac
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 52
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = dc
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 59
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 3f
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 82
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 77
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = a9
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 82
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = c1
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 73
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ca
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 40
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e2
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = fd
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = c6
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 38
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = f1
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e2
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e6
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = ff
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 49
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = e8
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 30
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 35
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 6d
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 3f
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6b
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = a
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = de
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 8b
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ae
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = dd
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 6e
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ce
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 93
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6f
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = d7
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = f1
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 87
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 28
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 6e
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 4a
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 97
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 33
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 3a
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 4b
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 63
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 87
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 93
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ba
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 80
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 79
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 98
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 65
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 2c
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = d7
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6d
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = bf
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 7f
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = d3
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 7a
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 3f
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = c
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 82
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 62
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 5f
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ee
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 5
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = df
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 84
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 13
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6e
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 9d
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 3a
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 5b
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e1
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = dc
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = af
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = bf
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 62
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e4
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 43
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 45
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6e
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = a5
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = e3
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = df
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 50
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 63
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 5c
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = a9
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = c3
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = b0
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ** Note: $finish    : Environment.sv(74)
+#    Time: 13710 ns  Iteration: 2  Instance: /async_fifo_top/t1
+# 1
+# Break in Task async_fifo_test_sv_unit/environment::run at Environment.sv line 74
+#  exit
+# TEST FINISHED SUCCESSFULLY
+# ** Note: $finish    : async_fifo_test.sv(15)
+#    Time: 13710 ns  Iteration: 2  Instance: /async_fifo_top/t1
+# 1
+# Break at async_fifo_test.sv line 15
+# Coverage Report Summary Data by instance
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/sync_wptr
+# === Design Unit: work.synchronizer
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+#     Statements                       5         5         0   100.00%
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/sync_rptr
+# === Design Unit: work.synchronizer
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+#     Statements                       5         5         0   100.00%
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/wptr_h
+# === Design Unit: work.write_ptr
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         4         4         0   100.00%
+#     Statements                      12        12         0   100.00%
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/rptr_h
+# === Design Unit: work.read_ptr
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         4         4         0   100.00%
+#     Statements                      12        12         0   100.00%
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/fifom
+# === Design Unit: work.fifo_mem
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         4         4         0   100.00%
+#     Conditions                       4         3         1    75.00%
+#     Statements                       6         6         0   100.00%
+# 
+# 
+# Total Coverage By Instance (filtered view): 91.66%
+# 
+# 
+# Coverage Report by instance with details
+# 
+# =================================================================================
+# === Instance: /async_fifo_top
+# === Design Unit: work.async_fifo_top
+# =================================================================================
+# 
+# Covergroup Coverage:
+#     Covergroups                      1        na        na    50.00%
+#         Coverpoints/Crosses         15        na        na        na
+#             Covergroup Bins         31        15        16    48.38%
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Covergroup                                         RHS                           Metric       Goal       Bins    Status               
+#                                                                                                                                    
+# -----------------------------------------------------------------------------------------------------------------------------------
+#  TYPE /async_fifo_top/async_fifo_cover                                           50.00%        100          -    Uncovered            
+#     covered/total bins:                                                              15         31          -                      
+#     missing/total bins:                                                              16         31          -                      
+#     % Hit:                                                                       48.38%        100          -                      
+#     Coverpoint DATA_WRITE                                                       100.00%        100          -    Covered              
+#         covered/total bins:                                                           1          1          -                      
+#         missing/total bins:                                                           0          1          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint WRITE_FULL                                                         0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Coverpoint READ_EMPTY                                                       100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint DATA_READ                                                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          1          -                      
+#         missing/total bins:                                                           1          1          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Coverpoint W_INC                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint R_INC                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint W_RESET                                                           50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           1          2          -                      
+#         missing/total bins:                                                           1          2          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#     Coverpoint R_RESET                                                           50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           1          2          -                      
+#         missing/total bins:                                                           1          2          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#     Coverpoint W_CLK                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint R_CLK                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Cross WRITExADDxDATA                                                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           2          4          -                      
+#         missing/total bins:                                                           2          4          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#     Cross READxADDxDATA                                                           0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          4          -                      
+#         missing/total bins:                                                           4          4          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Cross READxWRITE                                                              0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          1          -                      
+#         missing/total bins:                                                           1          1          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Cross RESETxWRITE                                                             0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Cross RESETxREAD                                                              0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#  Covergroup instance \/async_fifo_top/async_fifo_cov_inst  
+#                                                                                  50.00%        100          -    Uncovered            
+#     covered/total bins:                                                              15         31          -                      
+#     missing/total bins:                                                              16         31          -                      
+#     % Hit:                                                                       48.38%        100          -                      
+#     Coverpoint DATA_WRITE                                                       100.00%        100          -    Covered              
+#         covered/total bins:                                                           1          1          -                      
+#         missing/total bins:                                                           0          1          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin low_range                              1:255                            552          1          -    Covered              
+#     Coverpoint WRITE_FULL                                                         0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         bin full_c                                 0=>1                               0          1          -    ZERO                 
+#         bin full_c1                                1=>0                               0          1          -    ZERO                 
+#     Coverpoint READ_EMPTY                                                       100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin empty_c                                0=>1                              16          1          -    Covered              
+#         bin empty_c1                               1=>0                              17          1          -    Covered              
+#     Coverpoint DATA_READ                                                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          1          -                      
+#         missing/total bins:                                                           1          1          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         bin low_range                              1:255                              0          1          -    ZERO                 
+#     Coverpoint W_INC                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin incr_s                                 0=>1                              58          1          -    Covered              
+#         bin incr_s1                                1=>0                              57          1          -    Covered              
+#     Coverpoint R_INC                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin incr_sr                                0=>1                              64          1          -    Covered              
+#         bin incr_s1r                               1=>0                              63          1          -    Covered              
+#     Coverpoint W_RESET                                                           50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           1          2          -                      
+#         missing/total bins:                                                           1          2          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#         bin reset_low_to_high                      0=>1                               1          1          -    Covered              
+#         bin reset_high_to_low                      1=>0                               0          1          -    ZERO                 
+#     Coverpoint R_RESET                                                           50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           1          2          -                      
+#         missing/total bins:                                                           1          2          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#         bin reset_low_to_high                      0=>1                               1          1          -    Covered              
+#         bin reset_high_to_low                      1=>0                               0          1          -    ZERO                 
+#     Coverpoint W_CLK                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin clk_low_to_high                        0=>1                             130          1          -    Covered              
+#         bin clk_high_to_low                        1=>0                             131          1          -    Covered              
+#     Coverpoint R_CLK                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin clk_low_to_high                        0=>1                             164          1          -    Covered              
+#         bin clk_high_to_low                        1=>0                             163          1          -    Covered              
+#     Cross WRITExADDxDATA                                                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           2          4          -                      
+#         missing/total bins:                                                           2          4          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <clk_low_to_high,incr_s1,low_range> 
+#                                                                                      39          1          -    Covered              
+#             bin <clk_high_to_low,incr_s,low_range>                                   38          1          -    Covered              
+#             bin <clk_high_to_low,incr_s1,*>                                           0          1          1    ZERO                 
+#             bin <clk_low_to_high,incr_s,*>                                            0          1          1    ZERO                 
+#     Cross READxADDxDATA                                                           0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          4          -                      
+#         missing/total bins:                                                           4          4          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <*,*,*>                                                               0          1          4    ZERO                 
+#     Cross READxWRITE                                                              0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          1          -                      
+#         missing/total bins:                                                           1          1          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <low_range,low_range>                                                 0          1          1    ZERO                 
+#     Cross RESETxWRITE                                                             0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <*,*>                                                                 0          1          2    ZERO                 
+#     Cross RESETxREAD                                                              0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <*,*>                                                                 0          1          2    ZERO                 
+# 
+# COVERGROUP COVERAGE:
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Covergroup                                         RHS                           Metric       Goal       Bins    Status               
+#                                                                                                                                    
+# -----------------------------------------------------------------------------------------------------------------------------------
+#  TYPE /async_fifo_top/async_fifo_cover                                           50.00%        100          -    Uncovered            
+#     covered/total bins:                                                              15         31          -                      
+#     missing/total bins:                                                              16         31          -                      
+#     % Hit:                                                                       48.38%        100          -                      
+#     Coverpoint DATA_WRITE                                                       100.00%        100          -    Covered              
+#         covered/total bins:                                                           1          1          -                      
+#         missing/total bins:                                                           0          1          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint WRITE_FULL                                                         0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Coverpoint READ_EMPTY                                                       100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint DATA_READ                                                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          1          -                      
+#         missing/total bins:                                                           1          1          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Coverpoint W_INC                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint R_INC                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint W_RESET                                                           50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           1          2          -                      
+#         missing/total bins:                                                           1          2          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#     Coverpoint R_RESET                                                           50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           1          2          -                      
+#         missing/total bins:                                                           1          2          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#     Coverpoint W_CLK                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Coverpoint R_CLK                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#     Cross WRITExADDxDATA                                                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           2          4          -                      
+#         missing/total bins:                                                           2          4          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#     Cross READxADDxDATA                                                           0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          4          -                      
+#         missing/total bins:                                                           4          4          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Cross READxWRITE                                                              0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          1          -                      
+#         missing/total bins:                                                           1          1          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Cross RESETxWRITE                                                             0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#     Cross RESETxREAD                                                              0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#  Covergroup instance \/async_fifo_top/async_fifo_cov_inst  
+#                                                                                  50.00%        100          -    Uncovered            
+#     covered/total bins:                                                              15         31          -                      
+#     missing/total bins:                                                              16         31          -                      
+#     % Hit:                                                                       48.38%        100          -                      
+#     Coverpoint DATA_WRITE                                                       100.00%        100          -    Covered              
+#         covered/total bins:                                                           1          1          -                      
+#         missing/total bins:                                                           0          1          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin low_range                              1:255                            552          1          -    Covered              
+#     Coverpoint WRITE_FULL                                                         0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         bin full_c                                 0=>1                               0          1          -    ZERO                 
+#         bin full_c1                                1=>0                               0          1          -    ZERO                 
+#     Coverpoint READ_EMPTY                                                       100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin empty_c                                0=>1                              16          1          -    Covered              
+#         bin empty_c1                               1=>0                              17          1          -    Covered              
+#     Coverpoint DATA_READ                                                          0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          1          -                      
+#         missing/total bins:                                                           1          1          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         bin low_range                              1:255                              0          1          -    ZERO                 
+#     Coverpoint W_INC                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin incr_s                                 0=>1                              58          1          -    Covered              
+#         bin incr_s1                                1=>0                              57          1          -    Covered              
+#     Coverpoint R_INC                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin incr_sr                                0=>1                              64          1          -    Covered              
+#         bin incr_s1r                               1=>0                              63          1          -    Covered              
+#     Coverpoint W_RESET                                                           50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           1          2          -                      
+#         missing/total bins:                                                           1          2          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#         bin reset_low_to_high                      0=>1                               1          1          -    Covered              
+#         bin reset_high_to_low                      1=>0                               0          1          -    ZERO                 
+#     Coverpoint R_RESET                                                           50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           1          2          -                      
+#         missing/total bins:                                                           1          2          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#         bin reset_low_to_high                      0=>1                               1          1          -    Covered              
+#         bin reset_high_to_low                      1=>0                               0          1          -    ZERO                 
+#     Coverpoint W_CLK                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin clk_low_to_high                        0=>1                             130          1          -    Covered              
+#         bin clk_high_to_low                        1=>0                             131          1          -    Covered              
+#     Coverpoint R_CLK                                                            100.00%        100          -    Covered              
+#         covered/total bins:                                                           2          2          -                      
+#         missing/total bins:                                                           0          2          -                      
+#         % Hit:                                                                  100.00%        100          -                      
+#         bin clk_low_to_high                        0=>1                             164          1          -    Covered              
+#         bin clk_high_to_low                        1=>0                             163          1          -    Covered              
+#     Cross WRITExADDxDATA                                                         50.00%        100          -    Uncovered            
+#         covered/total bins:                                                           2          4          -                      
+#         missing/total bins:                                                           2          4          -                      
+#         % Hit:                                                                   50.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <clk_low_to_high,incr_s1,low_range> 
+#                                                                                      39          1          -    Covered              
+#             bin <clk_high_to_low,incr_s,low_range>                                   38          1          -    Covered              
+#             bin <clk_high_to_low,incr_s1,*>                                           0          1          1    ZERO                 
+#             bin <clk_low_to_high,incr_s,*>                                            0          1          1    ZERO                 
+#     Cross READxADDxDATA                                                           0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          4          -                      
+#         missing/total bins:                                                           4          4          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <*,*,*>                                                               0          1          4    ZERO                 
+#     Cross READxWRITE                                                              0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          1          -                      
+#         missing/total bins:                                                           1          1          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <low_range,low_range>                                                 0          1          1    ZERO                 
+#     Cross RESETxWRITE                                                             0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <*,*>                                                                 0          1          2    ZERO                 
+#     Cross RESETxREAD                                                              0.00%        100          -    ZERO                 
+#         covered/total bins:                                                           0          2          -                      
+#         missing/total bins:                                                           2          2          -                      
+#         % Hit:                                                                    0.00%        100          -                      
+#         Auto, Default and User Defined Bins:
+#             bin <*,*>                                                                 0          1          2    ZERO                 
+# 
+# TOTAL COVERGROUP COVERAGE: 50.00%  COVERGROUP TYPES: 1
+# 
+# Total Coverage By Instance (filtered view): 50.00%
+# 
+# 
+# QuestaSim-64 vcover 2023.3 Coverage Utility 2023.07 Jul 17 2023
+# Start time: 23:09:40 on May 14,2024
+# vcover report -html coverage_results 
+# ** Error: (vcover-7) Failed to open UCDB file "coverage_results" in read mode.
+# End time: 23:09:41 on May 14,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Coverage Report Summary Data by instance
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/sync_wptr
+# === Design Unit: work.synchronizer
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+#     Statements                       5         5         0   100.00%
+#     Toggles                         40        28        12    70.00%
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/sync_rptr
+# === Design Unit: work.synchronizer
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         2         2         0   100.00%
+#     Statements                       5         5         0   100.00%
+#     Toggles                         40        27        13    67.50%
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/wptr_h
+# === Design Unit: work.write_ptr
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         4         4         0   100.00%
+#     Statements                      12        12         0   100.00%
+#     Toggles                         86        60        26    69.76%
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/rptr_h
+# === Design Unit: work.read_ptr
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         4         4         0   100.00%
+#     Statements                      12        12         0   100.00%
+#     Toggles                         86        62        24    72.09%
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT/fifom
+# === Design Unit: work.fifo_mem
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         4         4         0   100.00%
+#     Conditions                       4         3         1    75.00%
+#     Statements                       6         6         0   100.00%
+#     Toggles                         16         0        16     0.00%
+# 
+# =================================================================================
+# === Instance: /async_fifo_top/DUT
+# === Design Unit: work.asynchronous_fifo
+# =================================================================================
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                        208        97       111    46.63%
+# 
+# 
+# Total Coverage By Instance (filtered view): 83.14%
+# 
+# 

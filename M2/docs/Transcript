@@ -1,0 +1,608 @@
+couldn't open "transcript": permission denied
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+cd {\\thoth.cecs.pdx.edu\Home02\kkarna\Desktop\ece593s24_team_99_Asyn_FIFO_M2}
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:43:05 on May 03,2024
+# vlog -reportprogress 300 design.sv 
+# -- Compiling module asynchronous_fifo
+# -- Compiling module synchronizer
+# -- Compiling module write_ptr
+# -- Compiling module read_ptr
+# -- Compiling module fifo_mem
+# 
+# Top level modules:
+# 	asynchronous_fifo
+# End time: 23:43:05 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:43:05 on May 03,2024
+# vlog -reportprogress 300 Interface.sv 
+# -- Compiling interface intf
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:43:05 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:43:05 on May 03,2024
+# vlog -reportprogress 300 top_module.sv 
+# -- Compiling package top_module_sv_unit
+# -- Compiling program test
+# -- Compiling interface intf
+# -- Compiling module async_fifo_top
+# 
+# Top level modules:
+# 	async_fifo_top
+# End time: 23:43:05 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:43:06 on May 03,2024
+# vlog -reportprogress 300 async_fifo_test.sv 
+# -- Compiling package async_fifo_test_sv_unit
+# -- Compiling program test
+# 
+# Top level modules:
+# 	test
+# End time: 23:43:06 on May 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.async_fifo_top 
+# Start time: 23:43:06 on May 03,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: Interface.sv(3): (vopt-3838) Variable 'data_write' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See top_module.sv(33). Variable is procedurally driven by data_write in clocking block driver_cb. See (Interface.sv:13).
+# 
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.top_module_sv_unit(fast)
+# Loading work.async_fifo_top(fast)
+# Loading work.async_fifo_test_sv_unit(fast)
+# Loading work.test(fast)
+# Loading work.intf(fast)
+# ** Warning: (vsim-3838) Variable '/async_fifo_top/in/data_write' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See top_module.sv(33).
+#    Time: 0 ns  Iteration: 0  Instance: /async_fifo_top/in File: Interface.sv Line: 3
+# test environment started
+# Reset Started
+# Reset Ended:
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 9c
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = aa
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 24
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 12
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = fe
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ea
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ac
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 52
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = dc
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 59
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 3f
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 82
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 77
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = a9
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 82
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = c1
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 73
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ca
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 40
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e2
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = fd
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = c6
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 38
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = f1
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e2
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e6
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = ff
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 49
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = e8
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 30
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 35
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 6d
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 3f
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6b
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = a
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = de
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 8b
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ae
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = dd
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 6e
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ce
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 93
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6f
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = d7
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = f1
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 87
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 28
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 6e
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 4a
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 97
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 33
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 3a
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 4b
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 63
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 87
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 93
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ba
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 80
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 79
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 98
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 65
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 2c
+# 	 read_enable = 0
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = d7
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6d
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = bf
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 7f
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = d3
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 7a
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 3f
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = c
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 82
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 62
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 5f
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = ee
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 5
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = df
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 84
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 13
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6e
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 9d
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 3a
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 5b
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e1
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = dc
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = af
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = bf
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 62
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = e4
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 43
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 45
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 6e
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = a5
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = e3
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = df
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = 50
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 63
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = 5c
+# 	 read_enable = 0
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 0 	 data_write = a9
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = c3
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ------Bursts requested 10-------
+# ------------------------------------------
+# 	 write_enable = 1 	 data_write = b0
+# 	 read_enable = 1
+# design has error at address 0 - tx3.Data = x - Saved Data = 9c
+# FIFO is empty
+# ** Note: $finish    : Environment.sv(74)
+#    Time: 3285 ns  Iteration: 2  Instance: /async_fifo_top/t1
+# 1
+# Break in Task async_fifo_test_sv_unit/environment::run at Environment.sv line 74
