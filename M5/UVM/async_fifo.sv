@@ -49,16 +49,7 @@ module ASYNC_FIFO #(parameter DATA_WIDTH = 9, parameter PTR_WIDTH = 9 ) (
 		.wHalf_empty(wHalf_empty)
     );
 
-    wptr_handler #(PTR_WIDTH) wptr_DUT (
-        .waddr(waddr),
-        .wfull(wfull),
-        .wptr(wptr),
-        .write_enable(write_enable),
-        .wclk(wclk),
-        .wrst_n(wrst_n),
-        .rptr_s(rptr_s),
-		.wHalf_full(wHalf_full)
-    );
+    
 
 endmodule : ASYNC_FIFO
 
